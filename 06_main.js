@@ -19,6 +19,7 @@ $("document").ready(function() {
             instructions,
             forced_choice_2A,
             post_test,
+            post_test2,
             thanks,
         ],
         // Here, you can specify all information for the deployment

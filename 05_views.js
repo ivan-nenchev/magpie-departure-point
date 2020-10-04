@@ -61,14 +61,31 @@ const post_test = magpieViews.view_generator("post_test", {
   // gender_male: 'männlich',
   // gender_female: 'weiblich',
   // gender_other: 'divers',
-  // edu_question: 'Höchster Bildungsabschluss',
-  // edu_graduated_high_school: 'Abitur',
-  // edu_graduated_college: 'Hochschulabschluss',
-  // edu_higher_degree: 'Universitärer Abschluss',
+
   // languages_question: 'Muttersprache',
   // languages_more: '(in der Regel die Sprache, die Sie als Kind zu Hause gesprochen haben)',
   // comments_question: 'Weitere Kommentare'
 });
+const post_test2 = magpieViews.view_generator("post_test", {
+  trials: 1,
+  name: 'post_test',
+  title: 'Additional information2',
+  text: 'Answering the following questions is optional, but your answers will help us analyze our results.',
+
+  // You can change much of what appears here, e.g., to present it in a different language, as follows:
+  // buttonText: 'Weiter',
+  // age_question: 'Alter',
+  gender_question: 'Geschlecht',
+  gender_male: 'männlich',
+  gender_female: 'weiblich',
+  gender_other: 'divers',
+
+  // languages_question: 'Muttersprache',
+  // languages_more: '(in der Regel die Sprache, die Sie als Kind zu Hause gesprochen haben)',
+  // comments_question: 'Weitere Kommentare'
+});
+
+
 
 // The 'thanks' view is crucial; never delete it; it submits the results!
 const thanks = magpieViews.view_generator("thanks", {
@@ -113,7 +130,17 @@ const forced_choice_2A = magpieViews.view_generator("forced_choice", {
   // hook: {
   //     after_response_enabled: check_response
   // }
+}, {
+  stimulus_container_generator: function(config, CT) {
+    return `<div class='magpie-view'>
+                      <div class='magpie-view-stimulus-container'>
+                        <img src="${config.data[CT].picture}" >
+                        <img src="${config.data[CT].picture2}" >
+                      </div>
+                    </div>`;
+  }
 });
+
 
 // There are many more templates available:
 // forced_choice, slider_rating, dropdown_choice, testbox_input, rating_scale, image_selection, sentence_choice,
