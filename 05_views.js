@@ -66,25 +66,6 @@ const post_test = magpieViews.view_generator("post_test", {
   // languages_more: '(in der Regel die Sprache, die Sie als Kind zu Hause gesprochen haben)',
   // comments_question: 'Weitere Kommentare'
 });
-const post_test2 = magpieViews.view_generator("post_test", {
-  trials: 1,
-  name: 'post_test',
-  title: 'Additional information2',
-  text: 'Answering the following questions is optional, but your answers will help us analyze our results.',
-
-  // You can change much of what appears here, e.g., to present it in a different language, as follows:
-  // buttonText: 'Weiter',
-  // age_question: 'Alter',
-  gender_question: 'Geschlecht',
-  gender_male: 'männlich',
-  gender_female: 'weiblich',
-  gender_other: 'divers',
-
-  // languages_question: 'Muttersprache',
-  // languages_more: '(in der Regel die Sprache, die Sie als Kind zu Hause gesprochen haben)',
-  // comments_question: 'Weitere Kommentare'
-});
-
 
 
 // The 'thanks' view is crucial; never delete it; it submits the results!
@@ -120,25 +101,16 @@ const thanks = magpieViews.view_generator("thanks", {
 
 
 // Here, we initialize a normal forced_choice view
-const forced_choice_2A = magpieViews.view_generator("forced_choice", {
+const textbox_input2 = magpieViews.view_generator("textbox_input", {
   // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
-  trials: trial_info.forced_choice.length,
+  trials: trial_info.textbox_input.length,
   // name should be identical to the variable name
-  name: 'forced_choice_2A',
-  data: trial_info.forced_choice,
+  name: 'textbox_input2',
+  data: trial_info.textbox_input,
   // you can add custom functions at different stages through a view's life cycle
   // hook: {
   //     after_response_enabled: check_response
   // }
-}, {
-  stimulus_container_generator: function(config, CT) {
-    return `<div class='magpie-view'>
-                      <div class='magpie-view-stimulus-container'>
-                        <img src="${config.data[CT].picture}" >
-                        <img src="${config.data[CT].picture2}" >
-                      </div>
-                    </div>`;
-  }
 });
 
 
