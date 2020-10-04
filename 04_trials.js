@@ -3,11 +3,16 @@
 
 const trial_info = {
   textbox_input: [{
-    picture: "path/to/picture.jpg",
-    question: "How are you today?",
-    min_chars: 100
+    QUD: "",
+    question: "Welches Sprichwort fällt Ihnen zu dem ein?",
+    min_chars: 5,
+    sprichworttype: "abstract",
+
   }, {
-    question: "What's the weather like? like?",
-    min_chars: 50
+    QUD: "",
+    question: "Welches Sprichwort fällt Ihnen zu dem ein?",
+    min_chars: 5,
+    sprichworttype: "konkret",
+
   }]
 };
