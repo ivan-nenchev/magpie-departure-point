@@ -31,19 +31,16 @@ const intro = magpieViews.view_generator("intro", {
             <br />
             <br />
             This is a minimal experiment with one forced choice view. It can serve as a starting point for programming your own experiment.`,
-  buttonText: 'begin the experiment'
+  buttonText: 'Das Experiment beginnt'
 });
 
 // For most tasks, you need instructions views
 const instructions = magpieViews.view_generator("instructions", {
   trials: 1,
   name: 'instructions',
-  title: 'General Instructions',
-  text: `This is a sample instructions view.
-            <br />
-            <br />
-            Tell your participants what they are to do here.`,
-  buttonText: 'go to trials'
+  title: 'Allgemeine Instruktion',
+  text: `Im Folgendem werden Sie einige Texte zu lesen bekommen. Sie sollen für jeden Text entscheiden, welches Sprichwort am besten auf den Text passt. Es gibt keine richtigen oder falschen Antworten, versuchen Sie vielmehr Ihr sprachliche Intution und Sprachgefühl zu folgen. Bitte schreiben Sie das Sprichwort unter den Text in dem freien Feld auf.`,
+  buttonText: 'Zu den Aufgaben'
 });
 
 
