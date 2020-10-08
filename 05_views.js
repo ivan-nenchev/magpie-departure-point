@@ -98,17 +98,43 @@ const thanks = magpieViews.view_generator("thanks", {
 
 
 // Here, we initialize a normal forced_choice view
-const textbox_input2 = magpieViews.view_generator("textbox_input", {
-  // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
-  trials: trial_info.textbox_input.length,
-  // name should be identical to the variable name
-  name: 'textbox_input2',
-  data: trial_info.textbox_input,
+const sentence_choice2 = magpieViews.view_generator("sentence_choice", {
+    // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
+    trials: trial_info.sentence_choice.length,
+    // name should be identical to the variable name
+    name: 'sentence_choice2',
+    data: trial_info.sentence_choice,
+    mousetracking: {
+      autostart: true,
+    }
+
+  },
+
+  {
+    answer_container_generator: function(config, CT) {
+      return `<div class='magpie-view-answer-container'>
+                    <p class='magpie-view-question'>${config.data[CT].question}</p>
+                    <label for='s1' class='magpie-response-sentence'>${config.data[CT].option1}</label>
+                    <input type='radio' name='answer' id='s1' value="${config.data[CT].option1}" />
+                    <label for='s2' class='magpie-response-sentence'>${config.data[CT].option2}</label>
+                    <input type='radio' name='answer' id='s2' value="${config.data[CT].option2}" />
+                    <label for='s3' class='magpie-response-sentence'>${config.data[CT].option3}</label>
+                    <input type='radio' name='answer' id='s3' value="${config.data[CT].option3}" />
+                    <label for='s4' class='magpie-response-sentence'>${config.data[CT].option4}</label>
+                    <input type='radio' name='answer' id='s4' value="${config.data[CT].option4}" />
+                    <label for='s5' class='magpie-response-sentence'>${config.data[CT].option5}</label>
+                    <input type='radio' name='answer' id='s5' value="${config.data[CT].option5}" />
+                </div>`;
+    },
+
+
+
+  }
   // you can add custom functions at different stages through a view's life cycle
   // hook: {
   //     after_response_enabled: check_response
   // }
-});
+);
 
 
 // There are many more templates available:

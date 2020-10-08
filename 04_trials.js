@@ -2,17 +2,31 @@
 
 
 const trial_info = {
-  textbox_input: [{
-    QUD: "Die Organisation des Dorffestes ist bekanntlich blendend. Die Mitglieder der Vereine sorgen jedes Jahr dafür, dass das Dorffest zu einem rundum stimmigen Ereignis wird. Ruckzuck ist die Festhalle gesäubert und geschmückt. Jeder packt irgendwie irgendwo mit an. Die Arbeiten werden verteilt und schnell erledigt.",
-    question: "Welches Sprichwort fällt Ihnen zu dem Text ein? ",
-    min_chars: 5,
-    sprichworttype: "abstract",
+  sentence_choice: [{
+      question: "	Wenn die Aufsichtsperson nicht anwesend ist, verstoßen die anderen gegen die Regeln.",
+      option1: 'a.	Ein Hund, der nach zwei Hasen jagt, fängt keinen.',
+      option2: 'b.	Wenn der Hund schläft, hat der Wolf gut Schafe stehlen.',
+      option3: 'c.	Wer der Hund füttert, dem leckt er die Hände. ',
+      option4: 'd.	Zwei Hunde an einem Bein, kommen selten überein. ',
+      option5: 'e.	Soll der Hund Schläge haben, so hat er Leder gefressen.'
 
-  }, {
-    QUD: "",
-    question: "Welches Sprichwort fällt Ihnen zu dem ein?",
-    min_chars: 5,
-    sprichworttype: "konkret",
+    }, {
+      question: "What's the weather like?",
+      option1: 'shiny',
+      option2: 'rainbow',
+      option3: "bbb"
 
-  }]
+    },
+    {
+      question: "What's the weather like?",
+      option1: 'shiny',
+      option2: 'rainbow'
+    },
+    {
+      question: "What's the weather like?",
+      option1: 'shiny',
+      option2: 'rainbow'
+
+    }
+  ]
 };

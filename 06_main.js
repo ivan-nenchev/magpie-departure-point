@@ -17,7 +17,7 @@ $("document").ready(function() {
     views_seq: [
       intro,
       instructions,
-      textbox_input2,
+      sentence_choice2,
       post_test,
       thanks,
     ],
@@ -36,7 +36,7 @@ $("document").ready(function() {
     progress_bar: {
       in: [
         // list the view-names of the views for which you want a progress bar
-        textbox_input2.name,
+        sentence_choice2.name,
       ],
       // Possible styles are "default", "separate" and "chunks"
       style: "separate",
